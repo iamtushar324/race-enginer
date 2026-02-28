@@ -13,7 +13,13 @@ class EventBus:
         """Subscribe a callback to a specific event type."""
         if event_type not in self._subscribers:
             self._subscribers[event_type] = []
-        self._subscribers[event_type].append(callback)
+        if callback not in self._subscribers[event_type]:
+            self._subscribers[event_type].append(callback)
+
+    def unsubscribe(self, event_type: str, callback: Callable[..., Any]):
+        """Unsubscribe a callback from an event type."""
+        if event_type in self._subscribers and callback in self._subscribers[event_type]:
+            self._subscribers[event_type].remove(callback)
 
     async def publish(self, event_type: str, *args, **kwargs):
         """Publish an event to all subscribers asynchronously."""
