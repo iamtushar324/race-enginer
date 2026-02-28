@@ -3,3 +3,4 @@ app.log
 app.pid
 
 *.duckdb*
+.env
