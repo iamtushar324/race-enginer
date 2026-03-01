@@ -1,6 +1,73 @@
+# Python
 __pycache__/
-app.log
-app.pid
+*.py[cod]
+*$py.class
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-*.duckdb*
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables
 .env
+.env.local
+
+# Logs and Databases
+*.log
+*.sqlite
+*.sqlite3
+*.duckdb
+*.duckdb.wal
+
+# OS Specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# Type Checking / Linting / Tests
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Reference / third-party telemetry applications
+f1-25-telemetry-application/
+
+# Plan files and scratch notes
+*-plan.md
+gemini-plan.md
+
+# Scripts
+start

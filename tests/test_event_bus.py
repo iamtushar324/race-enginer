@@ -2,6 +2,7 @@ import asyncio
 import pytest
 from race_engineer.core.event_bus import EventBus
 
+
 @pytest.mark.asyncio
 async def test_event_bus_publish_subscribe():
     bus = EventBus()
@@ -11,13 +12,14 @@ async def test_event_bus_publish_subscribe():
         received_events.append(data)
 
     bus.subscribe("test_event", mock_handler)
-    
+
     await bus.publish("test_event", {"key": "value"})
     # wait a tiny bit to let the asyncio.create_task run
     await asyncio.sleep(0.01)
 
     assert len(received_events) == 1
     assert received_events[0] == {"key": "value"}
+
 
 @pytest.mark.asyncio
 async def test_event_bus_multiple_subscribers():

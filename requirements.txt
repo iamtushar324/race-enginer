@@ -2,39 +2,39 @@
 
 # --- Core ---
 # Data validation and parsing
-pydantic==2.5.2
+pydantic>=2.5.2
 
 # --- Telemetry Engine ---
 # Standard F1 telemetry library (offline analysis)
-fastf1==3.1.2
+fastf1>=3.1.2
 
 # For real-time UDP handling, standard library 'socket' and 'struct' will be used mostly.
 
 # --- Voice Engine ---
 # Text-to-Speech (TTS)
-pyttsx3==2.90
+pyttsx3>=2.90
 
 # Speech-to-Text (STT)
-SpeechRecognition==3.10.0
+SpeechRecognition>=3.10.0
 
 # Microphone access for STT
-PyAudio==0.2.14
+PyAudio>=0.2.14
 
 # --- Feedback Engine / Intelligence ---
 # For interacting with LLM for dynamic responses or complex query handling
-google-genai==0.3.0
+google-genai>=0.3.0
 
 # --- Testing & Quality ---
-pytest==7.4.3
-pytest-asyncio==0.23.2
-black==23.11.0
-ruff==0.1.6
+pytest>=7.4.3
+pytest-asyncio>=0.23.2
+black>=23.11.0
+ruff>=0.1.6
 
 # --- Web UI ---
-fastapi==0.105.0
-uvicorn==0.24.0.post1
-websockets==12.0
+fastapi>=0.105.0
+uvicorn>=0.24.0.post1
+websockets>=12.0
 
 # --- Database ---
-duckdb==0.9.2
-python-dotenv==1.0.1
+duckdb>=0.9.2
+python-dotenv>=1.0.1

@@ -1,11 +1,13 @@
 import asyncio
 from typing import Callable, Dict, List, Any
 
+
 class EventBus:
     """
     A simple asynchronous Event Bus to orchestrate communication between the
     Telemetry Parser, Feedback Engine, and Voice Engine.
     """
+
     def __init__(self):
         self._subscribers: Dict[str, List[Callable[..., Any]]] = {}
 
@@ -18,7 +20,10 @@ class EventBus:
 
     def unsubscribe(self, event_type: str, callback: Callable[..., Any]):
         """Unsubscribe a callback from an event type."""
-        if event_type in self._subscribers and callback in self._subscribers[event_type]:
+        if (
+            event_type in self._subscribers
+            and callback in self._subscribers[event_type]
+        ):
             self._subscribers[event_type].remove(callback)
 
     async def publish(self, event_type: str, *args, **kwargs):
@@ -33,9 +38,10 @@ class EventBus:
                     # Run synchronous callbacks in a thread pool to avoid blocking
                     loop = asyncio.get_running_loop()
                     tasks.append(loop.run_in_executor(None, callback, *args))
-            
+
             if tasks:
                 await asyncio.gather(*tasks)
+
 
 # Global event bus instance for the application
 bus = EventBus()
