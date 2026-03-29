@@ -11,14 +11,25 @@ fastf1>=3.1.2
 # For real-time UDP handling, standard library 'socket' and 'struct' will be used mostly.
 
 # --- Voice Engine ---
-# Text-to-Speech (TTS)
-pyttsx3>=2.90
+# Text-to-Speech (TTS) via Microsoft Edge neural voices
+edge-tts>=6.1.0
 
-# Speech-to-Text (STT)
-SpeechRecognition>=3.10.0
+# Speech-to-Text (STT) via CTranslate2 Whisper
+faster-whisper>=1.0.0
 
-# Microphone access for STT
-PyAudio>=0.2.14
+# Speech-to-Text (STT) via NVIDIA Parakeet TDT (NeMo) — optional
+# nemo_toolkit[asr]>=2.0.0
+
+# Text-to-Speech (TTS) via Qwen3-TTS on Apple Silicon (MLX) — optional
+# mlx-audio>=0.2.0
+
+# Audio processing — needed for parakeet/qwen-tts engines
+# soundfile>=0.12.1
+# numpy>=1.24.0
+# librosa>=0.10.0
+
+# HTTP client for cloud STT APIs (Resemble.ai)
+httpx>=0.27.0
 
 # --- Feedback Engine / Intelligence ---
 # For interacting with LLM for dynamic responses or complex query handling
@@ -32,6 +43,7 @@ ruff>=0.1.6
 
 # --- Web UI ---
 fastapi>=0.105.0
+python-multipart>=0.0.20
 uvicorn>=0.24.0.post1
 websockets>=12.0
 

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "data-analyst": {
+      "mode": "primary",
+      "description": "F1 strategy analyst for driver Tushar. Queries live telemetry from DuckDB (player car_index detected dynamically each session), cross-references workspace context files, and publishes actionable insights to the Race Engineer via CLI webhooks.",
+      "tools": {
+        "bash": true,
+        "write": false,
+        "edit": false
+      },
+      "permissions": {
+        "bash": "allow"
+      }
+    }
+  }
+}

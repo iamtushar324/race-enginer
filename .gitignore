@@ -53,7 +53,7 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
-.claude/
+.claude/settings.local.json
 
 # Type Checking / Linting / Tests
 .mypy_cache/
@@ -71,3 +71,13 @@ gemini-plan.md
 
 # Scripts
 start
+
+# Go build output
+bin/
+telemetry-core/server
+telemetry-core/query
+telemetry-core/insightlog
+
+# OpenCode agent workspaces
+.opencode/
+node_modules/

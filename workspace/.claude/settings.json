@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./bin/racedb:*)",
+      "Bash(./bin/insightlog:*)",
+      "Bash(./bin/publish_insight:*)",
+      "Bash(./bin/publish_critical:*)",
+      "Bash(curl:*)",
+      "Read",
+      "Glob",
+      "Grep"
+    ]
+  }
+}
